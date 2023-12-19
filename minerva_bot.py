@@ -70,8 +70,7 @@ class MinervaBot:
 
     def register_crns(self):
         crn_id = 1
-        doLoop = True
-        if doLoop:
+        if doLoop := True:
             for crn_course_id in self.crn:
                 crn_xpath = f'/html/body/div[3]/form/table[3]/tbody/tr[2]/td[{crn_id}]/input[2]'
                 crn_selector = f'#crn_id{crn_id}'
