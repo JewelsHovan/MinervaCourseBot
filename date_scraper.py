@@ -10,7 +10,7 @@ from datetime import datetime
 class DateScraper:
     def __init__(self):
         self.url = "https://www.mcgill.ca/importantdates/key-dates"
-        self.response = requests.get("https://www.mcgill.ca/importantdates/key-dates")
+        self.response = requests.get("https://www.mcgill.ca/importantdates/key-dates", timeout=60)
         self.soup = BeautifulSoup(self.response.text, "html.parser")
         self.key_dates = {} # stores key dates
 
